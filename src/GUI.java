@@ -31,6 +31,7 @@ public class GUI extends JFrame {
     {
         defaultSettings("Calcolatrice - Apiandrea");
 
+        // raggruppo i 3 pulsanti per cambiare tema
         ButtonGroup radioGroup = new ButtonGroup();
         radioGroup.add(whiteRadioButton);
         radioGroup.add(blackRadioButton);
@@ -41,10 +42,6 @@ public class GUI extends JFrame {
 
         resField.setEditable(false);
         history.setEditable(false);
-
-        // lo setto visibile
-        setVisible(true);
-        // --------------------
 
         // Listeners:
         whiteRadioButton.addActionListener(new ActionListener() {
@@ -116,10 +113,10 @@ public class GUI extends JFrame {
             }
         });
 
-        // ---------------------------------------------
     }
 
     public void defaultSettings(String title){
+
         // serve per utilizzare il GUI.form
         setContentPane(rootPanel);
         // ---------------------------
@@ -129,7 +126,12 @@ public class GUI extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(600, 500);
         setResizable(false);
+
+        // centro la finestra
         setLocationRelativeTo(null);
+
+        // lo setto visibile
+        setVisible(true);
         // ----------------------------
     }
 
@@ -157,6 +159,7 @@ public class GUI extends JFrame {
                 resPanel.setBackground(new Color(148,22,18));
                 history.setBackground(Color.white);
                 history.setForeground(Color.black);
+
                 break;
             default:
                 break;
